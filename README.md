@@ -1,53 +1,59 @@
-Bee Finance 🐝💰
-📌 About the Project
-Bee Finance is a DApp focused on wallet management, contract revocation, asset security, and investment visualization. The system fetches data directly from the blockchain, identifying liquidity pools and providing detailed analytics.
+# Bee Finance 🐝💰
 
-🚀 Features
-📊 Interactive charts for asset visualization and valuation.
+## 📌 Sobre o Projeto
 
-🔒 Contract revocation for enhanced wallet security.
+A **Bee Finance** é uma DApp focada em **gerenciamento de carteiras, revogação de contratos, segurança de ativos e visualização de investimentos**. O sistema busca dados diretamente da blockchain, identificando pools de liquidez e fornecendo análises detalhadas.
 
-🏦 Multi-wallet management across different networks (Ethereum, Solana, Sui, etc.).
+## 🚀 Funcionalidades
 
-🔍 Liquidity pool identification and investment opportunities.
+- 📊 **Gráficos interativos** para visualização de ativos e valorização.
+- 🔒 **Revogação de contratos** para maior segurança da carteira.
+- 🏦 **Gerenciamento de múltiplas carteiras** em diferentes redes (Ethereum, Solana, Sui, etc.).
+- 🔍 **Identificação de pools de liquidez** e oportunidades de investimento.
 
-🛠 Technologies Used
-Backend:
-Python (FastAPI)
+## 🛠 Tecnologias Utilizadas
 
-SQLModel + SQLAlchemy
+### **Backend:**
 
-Blockchain integration
+- Python (FastAPI)
+- SQLModel + SQLAlchemy
+- Integração com blockchain
 
-Frontend:
-Vue.js
+### **Frontend:**
 
-Tailwind CSS
+- Vue.js
+- Tailwind CSS
+- Web3.js / ethers.js
 
-Web3.js / ethers.js
+## ⚙️ Como Rodar o Projeto
 
-⚙️ How to Run the Project
-For a test environment, use the following Shell script:
+> Para ambiente de testes, utilize o script Shell:
 
-bash
-Copy
-chmod +x run.sh  # Grant execution permission
-./run.sh  # Execute the script to run backend and frontend
-📂 Repository Structure
-📂 BeeFinance/
-├── 📂 BeeFinance-backend/ (Python API, blockchain integration)
-├── 📂 BeeFinance-frontend/ (Vue.js interface)
-├── 📂 docs/ (Project documentation)
-├── 📂 scripts/ (Deployment automation, CI/CD, etc.)
-├── 📜 README.md (This file)
-├── 📜 .gitignore (Files ignored by Git)
+```bash
+chmod +x run.sh  # Dá permissão de execução
+./run.sh  # Executa o script para rodar backend e frontend
+```
 
-🏗️ Future Plans
-🔹 Implementation of Docker for service management.
+## 📂 Estrutura do Repositório
 
-🔹 Separation of backend and frontend into distinct repositories when necessary.
+📂 **BeeFinance/**\
+├── 📂 **BeeFinance-backend/** *(API em Python, integração blockchain)*\
+├── 📂 **BeeFinance-frontend/** *(Interface Vue.js)*\
+├── 📂 **docs/** *(Documentação do projeto)*\
+├── 📂 **scripts/** *(Automação de deploy, CI/CD, etc.)*\
+├── 📜 README.md *(Este arquivo)*\
+├── 📜 .gitignore *(Arquivos ignorados pelo Git)*
 
-🤝 Contribution
-If you'd like to contribute, feel free to open an issue or send a pull request. All help is welcome! �
+---
 
-This version is formatted in a way that a developer would typically structure a README file, with clear sections and concise descriptions.
+## 🏗️ Planejamento Futuro
+
+- 🔹 Implementação de **Docker** para gerenciar os serviços.
+
+
+- 🔹 Separação do backend e frontend em repositórios distintos quando necessário.
+
+## 🤝 Contribuição
+
+Caso queira contribuir, fique à vontade para abrir uma **issue** ou enviar um **pull request**. Toda ajuda é bem-vinda! 🚀
+
