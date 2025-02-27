@@ -1,38 +1,52 @@
 <script setup>
+
+import beelogo from "../assets/beelogo.ico";
+import honeycombchart from "../assets/honeycomb-chart.png";
+import securitymetrics from "../assets/security-metrics.png";
+import honeycombwallet from "../assets/honeycomb-wallet.png";
+import shieldbee from "../assets/shield-bee.png";
+import beetracking from "../assets/bee-tracking.png";
+
+function showAlert() {
+    alert('App Launched!');
+}
+
 </script>
 
 <template>
-    <body>
+    <div class="body">
 
         <header>
-            <img src="../assets/beelogo.ico" alt="Bee Mascot" class="bee-mascot">
-            <button class="launch-app" onclick="showAlert()">Launch App</button>
+            <img :src="beelogo" alt="Bee Mascot" class="bee-mascot">
+            <button class="launch-app" @click="showAlert">Launch App</button>
         </header>
         
         <section class="hero">
             <h1>Secure Your Crypto Hive with Our Wallet Management System</h1>
             <p>Your assets, safe and organized like a beehive.</p>
-            <button class="cta-button" onclick="scrollToFeatures()">Get Started</button>
+            <button class="cta-button">Get Started</button>
         </section>
         
         <section class="graphics">
             <div class="chart-container">
-                <img src="../assets/honeycomb-chart.png" alt="Wallet Activity Chart">
-                <img src="../assets/security-metrics.png" alt="Security Metrics">
+                <img :src="honeycombchart" alt="Wallet Activity Chart">
+            </div>
+            <div class="chart-container">
+                <img :src="securitymetrics" alt="Security Metrics">
             </div>
         </section>
         
         <section class="features" id="features">
             <div class="feature">
-                <img src="../assets/shield-bee.png" alt="Security Icon">
+                <img :src="shieldbee" alt="Security Icon">
                 <h3>Multi-Layer Security</h3>
             </div>
             <div class="feature">
-                <img src="../assets/honeycomb-wallet.png" alt="Wallet Management">
+                <img :src="honeycombwallet" alt="Wallet Management">
                 <h3>Easy Wallet Management</h3>
             </div>
             <div class="feature">
-                <img src="../assets/bee-tracking.png" alt="Real-Time Analytics">
+                <img :src="beetracking" alt="Real-Time Analytics">
                 <h3>Real-Time Analytics</h3>
             </div>
         </section>
@@ -44,17 +58,16 @@
                 <a href="#">Contact</a>
                 <a href="#">Privacy Policy</a>
             </nav>
-            <img src="../assets/footer-bee.jpg" alt="Bee Hive Illustration" class="footer-bee">
         </footer>
-    </body>
+    </div>
     
 
 </template>
 
 <style scoped>
-    body {
+    .body {
         font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #ffcc00, #ff9900), url('honeycomb-texture.png');
+        background: linear-gradient(135deg, #ffcc00, #ff9900);
         background-blend-mode: multiply;
         background-size: cover;
         background-attachment: fixed;
@@ -100,11 +113,17 @@
         50% { transform: translateY(-10px); }
     }
     .hero {
-        padding: 60px 20px;
+        padding: 30px 20px;
         background: url('honeycomb-bg.png') no-repeat center center/cover;
         background-blend-mode: overlay;
         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     }
+
+    .hero h1 {
+        font-size: 32px;
+        margin: 0;
+    }
+    
     .cta-button {
         background: linear-gradient(135deg, #222, #555);
         color: #ffcc00;
@@ -123,9 +142,38 @@
         display: flex;
         justify-content: center;
         gap: 20px;
-        padding: 40px;
     }
+
+    .chart-container {
+        display: flex;
+        align-content: center;
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 0px 20px 50px 20px;
+    }
+
+    .chart-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .chart-container:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .chart-container:hover img {
+        transform: scale(1.1);
+    }
+
     .features {
+        flex-wrap: wrap;
         display: flex;
         justify-content: center;
         gap: 40px;
@@ -141,10 +189,35 @@
         0% { background-position: 0% 0%; }
         100% { background-position: 10% 10%; }
     }
+
     .feature {
         text-align: center;
-        max-width: 250px;
+        display: flex;
+        align-content: center;
+        width: 250px;
+        height: 125px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .feature img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature:hover img {
+        transform: scale(1.1);
+    }
+
     footer {
         background: rgba(0, 0, 0, 0.8);
         color: #fff;
