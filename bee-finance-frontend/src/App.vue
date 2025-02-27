@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <LandingPage />
+  <router-view></router-view>
 </template>
 
 <style scoped>

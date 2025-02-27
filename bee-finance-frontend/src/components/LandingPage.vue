@@ -1,5 +1,6 @@
 <script setup>
 
+import { useRouter } from 'vue-router'; // Importando o hook para navegação
 import beelogo from "../assets/beelogo.ico";
 import honeycombchart from "../assets/honeycomb-chart.png";
 import securitymetrics from "../assets/security-metrics.png";
@@ -7,9 +8,11 @@ import honeycombwallet from "../assets/honeycomb-wallet.png";
 import shieldbee from "../assets/shield-bee.png";
 import beetracking from "../assets/bee-tracking.png";
 
-function showAlert() {
-    alert('App Launched!');
-}
+const router = useRouter(); // Inicializa o hook do router
+
+const goToApp = () => {
+  router.push('/app'); // Redireciona para a rota '/app'
+};
 
 </script>
 
@@ -18,7 +21,7 @@ function showAlert() {
 
         <header>
             <img :src="beelogo" alt="Bee Mascot" class="bee-mascot">
-            <button class="launch-app" @click="showAlert">Launch App</button>
+            <button class="launch-app" @click="goToApp">Launch App</button>
         </header>
         
         <section class="hero">
